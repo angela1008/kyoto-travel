@@ -1,0 +1,5 @@
+{
+  "name": "Osaka-Kyoto 4-Day Explorer",
+  "description": "A comprehensive 4-day, 3-night itinerary for Osaka and Kyoto with real-time location insights powered by Google Maps grounding.",
+  "requestFramePermissions": ["geolocation"]
+}
