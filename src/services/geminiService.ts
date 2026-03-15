@@ -1,8 +1,14 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
-
 export async function getMapsGroundingResponse(prompt: string, latitude?: number, longitude?: number) {
+  const apiKey = process.env.GEMINI_API_KEY || "";
+  
+  if (!apiKey) {
+    throw new Error("請先在 .env.local 設定 GEMINI_API_KEY 才能使用地圖搜尋功能");
+  }
+
+  const ai = new GoogleGenAI({ apiKey });
+
   try {
     const model = "gemini-2.5-flash";
     const config: any = {
