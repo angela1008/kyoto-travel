@@ -3,16 +3,16 @@ import { motion } from 'motion/react';
 
 const flightInfo = {
   departure: {
-    date: '3/17 (二)',
-    flight: '虎航 (預計 IT 212)',
-    route: '台北 (TPE) ➔ 關西 (KIX)',
-    time: '17:55 抵達',
+    date: '2026-03-17 (二)',
+    flight: 'tigerlight IT212',
+    route: 'TPE 桃園國際機場 (T1) ➔ KIX 大阪關西國際機場 (T1)',
+    time: '14:40 出發 ➔ 17:55 抵達',
   },
   return: {
-    date: '3/20 (五)',
-    flight: '虎航 IT 213',
-    route: '關西 (KIX) ➔ 台北 (TPE)',
-    time: '18:55 起飛',
+    date: '2026-03-20 (五)',
+    flight: 'tigersmart IT213',
+    route: 'KIX 大阪關西國際機場 (T1) ➔ TPE 桃園國際機場 (T1)',
+    time: '18:55 出發 ➔ 21:20 抵達',
   }
 };
 
@@ -47,11 +47,12 @@ const itinerary = [
     title: '抵達京都：梅小路飯店入住',
     mapLink: 'https://www.google.com/maps/dir/Kansai+International+Airport/Kyoto+Station/The+Royal+Park+Hotel+Kyoto+Umekoji',
     activities: [
-      { time: '17:55', text: '抵達關西機場 (KIX)', icon: MapPin, link: 'https://maps.google.com/?q=Kansai+International+Airport' },
+      { time: '17:55', text: '抵達關西機場 (KIX) (快速買些簡單食物)', icon: MapPin, link: 'https://maps.google.com/?q=Kansai+International+Airport' },
       { time: '19:14', text: '搭乘 JR Haruka 特急 (外國人優惠票 ¥2,200)', icon: Train, link: 'https://maps.google.com/?q=Kyoto+Station' },
-      { time: '20:45', text: '轉乘 JR 嵯峨野線至「梅小路京都西站」(¥150)', icon: Train, link: 'https://maps.google.com/?q=Umekoji-Kyotonishi+Station' },
-      { time: '21:00', text: '飯店 Check-in：梅小路皇家花園飯店', icon: Hotel, link: 'https://maps.google.com/?q=The+Royal+Park+Hotel+Kyoto+Umekoji' },
-      { time: '21:30', text: '【晚餐】飯店周邊或京都車站內蔬食', icon: Utensils, link: 'https://maps.google.com/?q=Kyoto+Station+Vegetarian+Food' },
+      { time: '20:32', text: '抵達京都車站，吃晚餐：UNO RAMEN', icon: Utensils, link: 'https://maps.app.goo.gl/8dGgNukajca4DQX66' },
+      { time: '21:30', text: '到便利商店買個隔天早餐', icon: Coffee, link: 'https://maps.google.com/?q=Convenience+Store+Kyoto+Station' },
+      { time: '22:03', text: '搭乘 JR 嵯峨野線至「梅小路京都西站」', icon: Train, link: 'https://maps.google.com/?q=Umekoji-Kyotonishi+Station' },
+      { time: '22:30', text: '飯店 Check-in：梅小路皇家花園飯店', icon: Hotel, link: 'https://maps.google.com/?q=The+Royal+Park+Hotel+Kyoto+Umekoji' },
     ],
     tips: '【交通：Haruka 優惠票 + ICOCA】Haruka 優惠票包含京都市內 JR 站轉乘，轉一站到梅小路不需額外付費。',
   },
@@ -59,57 +60,62 @@ const itinerary = [
     day: 2,
     date: '3/18 (三)',
     title: '京都經典巡禮：和服攝影與御守解鎖',
-    mapLink: 'https://www.google.com/maps/dir/The+Royal+Park+Hotel+Kyoto+Umekoji/tekuteku+Kyoto+Kiyomizu+Shop/Gion+Hanamikoji/Fushimi+Inari+Taisha/Heian+Jingu/Okazaki+Shrine/Kiyomizu-dera/Kyoto+Station',
+    mapLink: 'https://www.google.com/maps/dir/The+Royal+Park+Hotel+Kyoto+Umekoji/tekuteku+Kyoto+Kiyomizu+Shop/Gion+Hanamikoji/Fushimi+Inari+Taisha/Heian+Jingu/Okazaki+Shrine/Kiyomizu-dera/Vegetarian+Cafe+Ren+Shij%C5%8D+%C5%8Cmiya',
     activities: [
-      { time: '08:00', text: '起床、吃早餐儲備體力', icon: Calendar, link: 'https://maps.google.com/?q=The+Royal+Park+Hotel+Kyoto+Umekoji' },
-      { time: '09:30', text: 'tekuteku 清水店 (和服體驗換裝)', icon: Sparkles, link: 'https://maps.google.com/?q=tekuteku+Kyoto+Kiyomizu+Shop' },
+      { time: '07:30', text: '起床、吃早餐儲備體力', icon: Calendar, link: 'https://maps.google.com/?q=The+Royal+Park+Hotel+Kyoto+Umekoji' },
+      { time: '08:42', text: '【最慢】搭上 JR 嵯峨野線前往京都車站', icon: Train, link: 'https://maps.google.com/?q=Umekoji-Kyotonishi+Station' },
+      { time: '09:30', text: '抵達 tekuteku 清水店 (和服體驗換裝)', icon: Sparkles, link: 'https://maps.google.com/?q=tekuteku+Kyoto+Kiyomizu+Shop' },
       { time: '11:30', text: '祇園、花見小路與攝影師會合拍照', icon: Camera, link: 'https://maps.google.com/?q=Gion+Hanamikoji' },
-      { time: '12:30', text: '【午餐】祇園周邊 (評估是否先還和服)', icon: Utensils, link: 'https://maps.google.com/?q=Gion+Vegetarian+Food' },
+      { time: '12:30', text: '【午餐】ZIRAEL Vegan 或 cafe vegan terrace (評估是否先還和服)', icon: Utensils, link: 'https://maps.app.goo.gl/6FaLwVfU2ytVwdu97' },
+      { time: '13:30', text: '午餐結束，出發前往伏見稻荷', icon: Train, link: 'https://maps.google.com/?q=Fushimi+Inari+Taisha' },
       { time: '14:00', text: '伏見稻荷大社：千本鳥居、買御守', icon: MapPin, link: 'https://maps.google.com/?q=Fushimi+Inari+Taisha' },
-      { time: '15:30', text: '平安神宮 & 岡崎神社 (買超萌兔子御守)', icon: MapPin, link: 'https://maps.google.com/?q=Okazaki+Shrine' },
-      { time: '17:00', text: '前往清水寺散策 或 回店還和服', icon: Camera, link: 'https://maps.google.com/?q=Kiyomizu-dera' },
-      { time: '18:00', text: '【晚餐】市區蔬食料理', icon: Utensils, link: 'https://maps.google.com/?q=Kyoto+Vegetarian+Dinner' },
-      { time: '20:00', text: '京都車站或鴨川走走散步', icon: Camera, link: 'https://maps.google.com/?q=Kyoto+Station' },
-      { time: '21:30', text: '回飯店休息', icon: Hotel, link: 'https://maps.google.com/?q=The+Royal+Park+Hotel+Kyoto+Umekoji' },
+      { time: '15:30', text: '平安神宮 & 岡崎神社 (買御守)', icon: MapPin, link: 'https://maps.google.com/?q=Okazaki+Shrine' },
+      { time: '17:00', text: '前往清水寺、二年坂三年坂散步 或 還和服', icon: Camera, link: 'https://maps.google.com/?q=Kiyomizu-dera' },
+      { time: '18:30', text: '【Deadline】tekuteku 還和服', icon: Sparkles, link: 'https://maps.google.com/?q=tekuteku+Kyoto+Kiyomizu+Shop' },
+      { time: '18:30', text: '【晚餐】Vegetarian Cafe Ren (可預約)', icon: Utensils, link: 'https://maps.app.goo.gl/cuKYAputktoF2Dxr8' },
+      { time: '20:00', text: '回飯店休息', icon: Hotel, link: 'https://maps.google.com/?q=The+Royal+Park+Hotel+Kyoto+Umekoji' },
     ],
-    tips: '【交通：ICOCA 全程刷卡】今日行程較滿，建議在伏見稻荷與平安神宮間移動時留意巴士班次。和服還衣截止為 18:30。',
+    tips: '【交通：ICOCA 全程刷卡】今日行程緊湊，建議留意巴士班次。和服務必於 18:30 前歸還。',
   },
   {
     day: 3,
     date: '3/19 (四)',
     title: '嵐山小火車與北區世界遺產',
-    mapLink: 'https://www.google.com/maps/dir/The+Royal+Park+Hotel+Kyoto+Umekoji/Umabori+Station/Torokko+Kameoka+Station/Arashiyama+Bamboo+Grove/Kinkaku-ji/Shimogamo+Jinja/Demachiyanagi+Station/Kyoto+Tower',
+    mapLink: 'https://www.google.com/maps/dir/The+Royal+Park+Hotel+Kyoto+Umekoji/Umabori+Station/Torokko+Kameoka+Station/Arashiyama+Bamboo+Grove/Kinkaku-ji/Shimogamo+Jinja/Demachiyanagi+Station/VEGAN+IZAKAYA+Nijiya',
     activities: [
-      { time: '08:00', text: '起床、化妝、吃早餐', icon: Calendar, link: 'https://maps.google.com/?q=The+Royal+Park+Hotel+Kyoto+Umekoji' },
-      { time: '09:30', text: '從梅小路京都西站搭 JR 出發', icon: Train, link: 'https://maps.google.com/?q=Umekoji-Kyotonishi+Station' },
-      { time: '10:00', text: '抵達馬堀站 ➔ 步行至小火車龜岡站', icon: Train, link: 'https://maps.google.com/?q=Torokko+Kameoka+Station' },
+      { time: '08:30', text: '起床、化妝、吃早餐', icon: Calendar, link: 'https://maps.google.com/?q=The+Royal+Park+Hotel+Kyoto+Umekoji' },
+      { time: '09:30', text: '【最慢】一定要搭上梅小路京都西站的 JR', icon: Train, link: 'https://maps.google.com/?q=Umekoji-Kyotonishi+Station' },
+      { time: '10:00', text: '抵達馬堀站 ➔ 步行15分鐘 ➔ 小火車龜岡站', icon: Train, link: 'https://maps.google.com/?q=Torokko+Kameoka+Station' },
       { time: '10:30', text: '搭乘嵐山小火車 (龜岡 ➔ 嵐山)', icon: Camera, link: 'https://maps.google.com/?q=Sagano+Romantic+Train' },
-      { time: '10:50', text: '嵐山竹林小徑、天龍寺散策', icon: MapPin, link: 'https://maps.google.com/?q=Arashiyama+Bamboo+Grove' },
-      { time: '12:00', text: '【午餐】嵐山湯豆腐料理', icon: Utensils, link: 'https://maps.google.com/?q=Arashiyama+Yudofu' },
+      { time: '10:50', text: '嵐山竹林小徑、天龍寺散步', icon: MapPin, link: 'https://maps.google.com/?q=Arashiyama+Bamboo+Grove' },
+      { time: '12:00', text: '【午餐】嵯峨豆腐 稻 北店', icon: Utensils, link: 'https://maps.app.goo.gl/qZ4pAQ9mRKXJQ3wA7' },
       { time: '14:00', text: '金閣寺 (舍利殿) 參拜', icon: MapPin, link: 'https://maps.google.com/?q=Kinkaku-ji' },
-      { time: '15:30', text: '下鴨神社 (世界遺產、糾之森)', icon: MapPin, link: 'https://maps.google.com/?q=Shimogamo+Jinja' },
-      { time: '17:00', text: '出町柳跳石 (鴨川跳烏龜)', icon: Camera, link: 'https://maps.google.com/?q=Demachiyanagi+Stepping+Stones' },
-      { time: '18:00', text: '【晚餐】市區蔬食料理', icon: Utensils, link: 'https://maps.google.com/?q=Kyoto+Vegetarian+Food' },
-      { time: '20:00', text: '京都車站、京都塔走走', icon: Camera, link: 'https://maps.google.com/?q=Kyoto+Tower' },
-      { time: '21:30', text: '回飯店休息', icon: Hotel, link: 'https://maps.google.com/?q=The+Royal+Park+Hotel+Kyoto+Umekoji' },
+      { time: '15:30', text: '下鴨神社 (世界遺產)', icon: MapPin, link: 'https://maps.google.com/?q=Shimogamo+Jinja' },
+      { time: '17:00', text: '出町跳石 (鴨川跳烏龜)', icon: Camera, link: 'https://maps.google.com/?q=Demachiyanagi+Stepping+Stones' },
+      { time: '17:30', text: '【晚餐】虹屋 nijiya (現場排隊)', icon: Utensils, link: 'https://maps.app.goo.gl/f4kheKVTCrtvGCNL6' },
+      { time: '19:00', text: '鴨川 or 京都車站、京都塔走走', icon: Camera, link: 'https://maps.google.com/?q=Kyoto+Tower' },
+      { time: '21:00', text: '回飯店休息', icon: Hotel, link: 'https://maps.google.com/?q=The+Royal+Park+Hotel+Kyoto+Umekoji' },
     ],
-    tips: '【交通：ICOCA + 巴士】嵐山到金閣寺建議搭乘巴士或嵐電轉巴士。傍晚在鴨川跳烏龜是長輩也會覺得有趣的體驗。',
+    tips: '【交通：ICOCA + 巴士】嵐山到金閣寺建議搭乘巴士。晚餐虹屋熱門，建議提早前往排隊。',
   },
   {
     day: 4,
     date: '3/20 (五)',
-    title: '奈良小鹿與天王寺 Haruka',
-    mapLink: 'https://www.google.com/maps/dir/The+Royal+Park+Hotel+Kyoto+Umekoji/Nara+Park/JR+Namba+Station/Tennoji+Station/Kansai+International+Airport',
+    title: '奈良小鹿與難波逛街採買',
+    mapLink: 'https://www.google.com/maps/dir/The+Royal+Park+Hotel+Kyoto+Umekoji/Nara+Park/Kintetsu-Nara+Station/Namba+Station/Kansai+International+Airport',
     activities: [
-      { time: '08:30', text: '搭 JR 經京都車站前往奈良 (¥800)', icon: Train, link: 'https://maps.google.com/?q=Nara+Station' },
-      { time: '10:00', text: '奈良公園餵小鹿、東大寺大佛', icon: MapPin, link: 'https://maps.google.com/?q=Todai-ji' },
+      { time: '08:00', text: '起床、吃早餐、整理行李、Checkout', icon: Calendar, link: 'https://maps.google.com/?q=The+Royal+Park+Hotel+Kyoto+Umekoji' },
+      { time: '09:21', text: '【最慢】搭上 JR 經京都車站前往奈良 (¥800)', icon: Train, link: 'https://maps.google.com/?q=Nara+Station' },
+      { time: '10:30', text: '奈良公園餵小鹿、東大寺大佛', icon: MapPin, link: 'https://maps.google.com/?q=Todai-ji' },
       { time: '12:00', text: '【午餐】奈良在地蔬食', icon: Utensils, link: 'https://maps.google.com/?q=Nara+Vegetarian+Food' },
-      { time: '13:30', text: '搭乘 JR 前往難波逛街採買 (¥480)', icon: Train, link: 'https://maps.google.com/?q=JR+Namba+Station' },
-      { time: '15:30', text: '從難波搭 JR 前往天王寺站', icon: Train, link: 'https://maps.google.com/?q=Tennoji+Station' },
-      { time: '16:10', text: '【關鍵時間】天王寺搭乘 Haruka (優惠票 ¥1,300)', icon: Train, link: 'https://maps.google.com/?q=Tennoji+Station+Haruka' },
+      { time: '13:30', text: '搭乘 近鐵奈良線 (45分鐘) ➔ 難波 (¥680)', icon: Train, link: 'https://maps.google.com/?q=Kintetsu-Nara+Station' },
+      { time: '14:20', text: '道頓堀、心齋橋逛街採買', icon: Camera, link: 'https://maps.google.com/?q=Dotonbori' },
+      { time: '16:08', text: '【最慢】搭南海本線 (50分鐘) ➔ 關西機場 (¥970)', icon: Train, link: 'https://maps.google.com/?q=Namba+Station' },
+      { time: '16:58', text: '抵達關西機場 (KIX)', icon: MapPin, link: 'https://maps.google.com/?q=Kansai+Airport+Terminal+1' },
+      { time: '17:15', text: '前往 JR 關西機場站辦理 ICOCA 退卡', icon: CreditCard, link: 'https://maps.google.com/?q=Kansai+Airport+Station' },
       { time: '18:55', text: '虎航 IT 213 起飛回台', icon: Plane, link: 'https://maps.google.com/?q=Kansai+Airport+Terminal+1' },
     ],
-    tips: '【交通：ICOCA + Haruka 優惠票】今日全程使用 JR 系統。請務必於 16:10 前抵達天王寺站搭乘 Haruka。',
+    tips: '【交通：ICOCA 全程刷卡】今日不搭 Haruka，改搭近鐵與南海電鐵。請務必於 16:08 前抵達南海難波站。',
   },
 ];
 
@@ -180,7 +186,7 @@ export default function Itinerary() {
             { day: 1, cost: '¥2,350', detail: 'Haruka (¥2200) + JR (¥150)' },
             { day: 2, cost: '¥1,500', detail: 'JR (¥200) + 京阪 (¥440) + 巴士 (¥800)' },
             { day: 3, cost: '¥2,280', detail: 'JR (¥200) + 小火車 (¥880) + 嵐電/地鐵/巴士 (¥1200)' },
-            { day: 4, cost: '¥2,580', detail: 'JR (¥1280) + Haruka (¥1300)' },
+            { day: 4, cost: '¥2,450', detail: 'JR (¥800) + 近鐵 (¥680) + 南海 (¥970)' },
           ].map((item) => (
             <div key={item.day} className="bg-white p-5 rounded-2xl border border-emerald-100 shadow-sm">
               <div className="flex justify-between items-start mb-2">
@@ -193,8 +199,8 @@ export default function Itinerary() {
         </div>
         <div className="mt-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
           <p className="text-xs text-slate-600 leading-relaxed">
-            <strong>💡 總結建議：</strong> 全程使用 <strong>ICOCA</strong> 搭配 <strong>Klook/KKday 預購的 Haruka 優惠票</strong> 即可。
-            不需購買額外的地鐵巴士一日券或 JR Pass，這樣安排最符合您的行程且最省錢。
+            <strong>💡 總結建議：</strong> 全程使用 <strong>ICOCA</strong> 即可。
+            第一天建議預購 <strong>Haruka 優惠票</strong>，最後一天則直接刷 ICOCA 搭乘近鐵與南海電鐵，這樣安排最符合您的行程且靈活。
           </p>
         </div>
       </section>
@@ -215,13 +221,16 @@ export default function Itinerary() {
                 飯店位於 JR 「梅小路京都西站」出口旁，這對您的行程非常有利：<br/>
                 1. 往返京都車站只需 3 分鐘 (1站)。<br/>
                 2. 往嵐山方向可直達，不需去京都車站人擠人。<br/>
-                3. 旁邊就是梅小路公園，環境清幽適合長輩散步。
+                3. 旁邊就是梅小路公園，環境清幽適合長輩散步。<br/>
+                <a href="https://www.royalparkhotels.co.jp/zh-CHT/the/kyotoumekoji/stay/rooms/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline inline-flex items-center gap-1 mt-2">
+                  查看房型詳情 <ExternalLink className="w-3 h-3" />
+                </a>
               </p>
             </div>
             <div className="w-full md:w-48 h-32 bg-slate-100 rounded-xl overflow-hidden">
               <img 
-                src="https://picsum.photos/seed/hotel/400/300" 
-                alt="Hotel Area" 
+                src="https://www.royalparkhotels.co.jp/the/kyotoumekoji/assets/images/stay/rooms/webp/img_superiortwin.webp" 
+                alt="Superior Twin Room" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />

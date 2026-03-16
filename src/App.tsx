@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { Plane, Map, Info } from 'lucide-react';
 import Itinerary from './components/Itinerary';
-import MapExplorer from './components/MapExplorer';
 
 export default function App() {
   return (
@@ -69,17 +68,6 @@ export default function App() {
         {/* Itinerary Section */}
         <Itinerary />
 
-        {/* Interactive Map Explorer */}
-        <section id="explorer">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600">
-              <Map className="w-6 h-6" />
-            </div>
-            <h2 className="text-2xl font-bold">智能地圖助手</h2>
-          </div>
-          <MapExplorer />
-        </section>
-
         {/* Footer Info */}
         <footer className="bg-slate-900 rounded-3xl p-8 md:p-12 text-white">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -107,16 +95,8 @@ export default function App() {
             <div>
               <h3 className="text-xl font-bold mb-4">關於此規劃</h3>
               <p className="text-slate-400 leading-relaxed">
-                此行程專為第一次前往關西的旅人設計，平衡了熱門地標與悠閒散策。您可以根據個人興趣調整 USJ 或京都的停留時間。
+                此行程專為長輩設計，重點在於減少步行、安排蔬食餐飲，並確保交通動線順暢，讓全家人都能輕鬆享受京都與奈良的古都氛圍。
               </p>
-              <div className="mt-6 flex gap-4">
-                <button className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm transition-colors">
-                  列印行程
-                </button>
-                <button className="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg text-sm transition-colors">
-                  分享給旅伴
-                </button>
-              </div>
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-white/10 text-center text-slate-500 text-sm">
