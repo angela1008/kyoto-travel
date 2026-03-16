@@ -1,20 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Kyoto Travel
 
-# Run and deploy your AI Studio app
+這是一個使用 React + Vite 建構的專案。
 
-This contains everything you need to run your app locally.
+## 快速開始
 
-View your app in AI Studio: https://ai.studio/apps/b0c85a03-579e-40ea-af41-4776b743d720
+### 1. 安裝套件
+請在終端機執行以下指令：
+```bash
+npm install
+```
 
-## Run Locally
+### 2. 環境變數設定
+請參考 `.env.example` 建立 `.env.local` 檔案。
 
-**Prerequisites:**  Node.js
+### 3. 啟動開發伺服器
+```bash
+npm run dev
+```
 
+## 部署上線
+本專案已設定 GitHub Actions，將程式碼推送到 `main` 分支即會自動部署至 GitHub Pages。
+> **注意：** 目前已在 `vite.config.ts` 內預設設定 `base: '/kyoto-travel/'`，以對應 GitHub Pages 路徑。
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 檔案設定說明
+- `package.json`: 專案資訊與對應套件。
+- `.github/workflows/deploy.yml`: 自動部署 GitHub Pages 的腳本。
+- `.gitignore`: 確保不會將隱私設定檔及暫存檔上傳。
